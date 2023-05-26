@@ -1,0 +1,19 @@
+{
+    "main": "dist/main.js",
+    "module": "dist/main.js",
+    "type": "module",
+    "scripts": {
+        "dev": "miniflare -m --watch --debug --kv MC_KV --build-command \"npm run build\" --build-watch-path \"src\"",
+        "build": "esbuild --format=esm --bundle --sourcemap --outdir=dist src/main.ts"
+    },
+    "devDependencies": {
+        "@cloudflare/workers-types": "^4.20230419.0",
+        "esbuild": "^0.17.18",
+        "miniflare": "^2.13.0",
+        "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "@neondatabase/serverless": "^0.4.5",
+        "hono": "^3.2.2"
+    }
+}

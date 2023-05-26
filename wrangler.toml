@@ -1,0 +1,3 @@
+name = "fake-news"
+main = "dist/main.js"
+compatibility_date = "2023-05-21"
